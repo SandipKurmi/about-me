@@ -67,3 +67,4 @@ footer{padding-top:24px; padding-bottom:40px; color:var(--muted); font-size:.9re
   .hero{padding-top:44px}
   .links{gap:12px}
 }
+button.btn{font:inherit;cursor:pointer;margin-top:8px}

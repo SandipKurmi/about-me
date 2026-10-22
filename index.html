@@ -142,12 +142,19 @@
       <a href="https://www.linkedin.com/in/sandip-kurmi/" target="_blank" rel="noopener">linkedin.com/in/sandip-kurmi</a>
       <a href="https://github.com/SandipKurmi" target="_blank" rel="noopener">github.com/SandipKurmi</a>
     </p>
+    <button class="btn" id="copy-email" type="button">Copy email address</button>
   </section>
 </main>
 
 <footer>
   <p>&copy; <span id="year">2026</span> Sandip Kurmi</p>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();
+var cb=document.getElementById('copy-email');
+cb.addEventListener('click',function(){
+  var e='sandipkurmi0@gmail.com';
+  var done=function(){cb.textContent='Copied: '+e;setTimeout(function(){cb.textContent='Copy email address'},2500)};
+  if(navigator.clipboard){navigator.clipboard.writeText(e).then(done,function(){window.prompt('Copy this email:',e)})}else{window.prompt('Copy this email:',e)}
+});</script>
 </body>
 </html>
